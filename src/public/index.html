@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Produtos</h1>
+    <form id="produtoForm">
+      <label for="codprod">Código do Produto:</label>
+      <input type="text" id="codprod" name="codprod" required>
+
+      <label for="numlote">Número do Lote:</label>
+      <input type="text" id="numlote" name="numlote" required>
+
+      <label for="nomeprod">Nome do Produto:</label>
+      <input type="text" id="nomeprod" name="nomeprod" required>
+
+      <label for="validade">Validade:</label>
+      <input type="date" id="validade" name="validade" required>
+
+      <label for="datafab">Data de Fabricação:</label>
+      <input type="date" id="datafab" name="datafab" required>
+
+      <button type="submit">Cadastrar Produto</button>
+    </form>
+
+    <div id="message" class="message" style="display: none;"></div>
+    <div id="error" class="error-message" style="display: none;"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
