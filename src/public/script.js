@@ -14,7 +14,7 @@ produtoForm.addEventListener('submit', async (e) => {
   };
 
   try {
-    const response = await fetch('/api/produtos', { // Rota da API
+    const response = await fetch('/api/produtos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ produtoForm.addEventListener('submit', async (e) => {
     });
 
     const responseData = await response.json();
-    alert(responseData.message); // Exibe mensagem de sucesso da API
+    alert(responseData.message);
     produtoForm.reset();
   } catch (error) {
     alert('Erro ao cadastrar produto. Verifique os dados e tente novamente.');
