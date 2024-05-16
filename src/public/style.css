@@ -65,3 +65,10 @@ body {
     display: none;
   }
   
+  .found {
+    color: green;
+}
+
+.not-found {
+    color: red;
+}
