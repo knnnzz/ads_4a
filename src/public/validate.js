@@ -7,13 +7,14 @@ document.getElementById('productForm').addEventListener('submit', function(event
     fetch('http://localhost:3001/api/produtos')
         .then(response => response.json())
         .then(data => {
-            const product = data.find(prod => prod.codprod === productCode);
+            const product = data.find(prod => prod.codprod === productCode, prod => prod.token === token);
 
             if (product) {
                 resultDiv.className = 'found';
                 resultDiv.innerHTML = `
                     <p><strong>Produto Encontrado:</strong></p>
                     <p><strong>ID: </strong>${product.id}</p>
+                    <p><strong>Token: </strong>${product.token}</p>
                     <p><strong>Código: </strong>${product.codprod}</p>
                     <p><strong>Nome: </strong>${product.nomeprod}</p>
                     <p><strong>Lote: </strong>${product.numlote}</p>
